@@ -145,7 +145,15 @@
             document.getElementById("error").innerText = "Ошибка в номере телефона";
             return;
         }
+
+        let data = {
+            name: name,
+            email: email,
+            phone: phone
+        }
         
+        tg.sendData(JSDON.stringify(data));
+        tg.close();
     });
 
 
